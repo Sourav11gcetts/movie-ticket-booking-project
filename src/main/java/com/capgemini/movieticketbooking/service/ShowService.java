@@ -9,10 +9,16 @@ import java.util.List;
 @Service
 public interface ShowService {
     public Show addShow(Show show);
-    public Show updateShow(Show show);
-    public Show removeShow(Show show);
-    public Show viewShow(Show show);
-    public List<Show> viewShowList(int theatreid);
+
+    public Show updateShow(Show show,Integer theatreId, Integer screenId);
+
+    public Show removeShow(int showId);
+
+    public Show viewShow(int showId);
+
+    public List<Show> viewShowList(int theatreid); //not implemented yet
+
     public List<Show> viewShowList(LocalDate date);
+
     public List<Show> viewAllShows();
 }
