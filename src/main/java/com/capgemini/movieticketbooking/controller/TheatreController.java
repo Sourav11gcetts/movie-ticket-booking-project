@@ -27,7 +27,7 @@ public class TheatreController {
 	 * @return listOfTheatres
 	 * @throws TheatreNotFoundException
 	 */
-	@GetMapping("/all")
+	@GetMapping("/getall")
 	public ResponseEntity<List<Theatre>> getAlltheatres() throws TheatreNotFoundException {
 
 		logger.info("-------Theatre List Fetched---------");
@@ -40,7 +40,7 @@ public class TheatreController {
 	 * @return inserted theatre
 	 * @throws TheatreNotFoundException
 	 */
-	@PostMapping("/insert")
+	@PostMapping("/add")
 	public ResponseEntity<Theatre> addTheatre(@RequestBody Theatre t)
 			throws TheatreNotFoundException {
 
